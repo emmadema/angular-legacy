@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Angular 2 is the best</title>
+</head>
+<body>
+    <p>My favorite cartoon is <b [hidden]="!debbyDowner" >not</b> : {{favoriteCartoon}}</p>
+  <label>
+    Go Negative: <input type="checkbox" [(ngModel)]="debbyDowner">
+  </label>
+  <ul>
+    <li *ngFor="let character of characters" [ngClass]="{'redText': showZoidberg}">{{character.name}}</li>
+  </ul>
+  <h4>I made {{money | currency:'USD':true}} last year.  It's all about the Washingtons, baby!</h4>
+  
+  <div>
+    <button (click)="woopWoopWoop()">Lobster Doctor</button>
+  </div>
+  <img src="{{imageurl}}" alt="Why Not Zoidberg?" [hidden]="!showZoidberg">
+</body>
+</html>
